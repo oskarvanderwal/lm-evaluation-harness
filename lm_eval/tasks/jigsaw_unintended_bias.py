@@ -175,7 +175,7 @@ class JigsawUnintendedBias(PromptSourceTask):
     #     fn = np.sum([1 for i in range(len(y_true)) if y_true[i] == 1 and y_fpred[i] == 0])
     #     return fp / (fp + tn)
 
-    def _aggregation(self):
+    def aggregation(self):
         import pandas as pd
         import numpy as np
         dimension_to_identity_set = {"race": ["black", "white", "asian", "latino", "other_race_or_ethnicity"], 
@@ -210,7 +210,7 @@ class JigsawUnintendedBias(PromptSourceTask):
         return {"race_var_fpr": compute_race_var, "race_std_fpr": compute_race_std, 
                 "gender_var_fpr": compute_gender_var, "gender_std_fpr": compute_gender_std}
 
-    def aggregation(self):
+    def _aggregation(self):
         out = {}
         out["acc"] = mean
         out["tp"] = np.nansum

@@ -131,7 +131,8 @@ class ShadesSpanish(PromptSourceTask):
     def test_docs(self):
         if self.has_test_docs():
             return self.dataset["test"]
-        
+
+
 # class ShadesRussian(PromptSourceTask):
 #     VERSION = 0
 #     DATASET_PATH = "BigScienceBiasEval/bias-shades"
@@ -179,7 +180,7 @@ class ShadesSpanish(PromptSourceTask):
 #     def test_docs(self):
 #         if self.has_test_docs():
 #             return self.dataset["test"]
-        
+
 
 # class ShadesTamil(PromptSourceTask):
 #     VERSION = 0
